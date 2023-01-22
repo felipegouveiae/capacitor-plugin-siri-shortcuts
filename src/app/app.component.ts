@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-import { SiriShortcuts } from '../../../Documents/GitHub/capacitor-plugin-siri-shortcuts/dist/esm';
+import { SiriShortcuts } from 'capacitor-plugin-siri-shorts';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { SiriShortcuts } from '../../../Documents/GitHub/capacitor-plugin-siri-s
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private toastController: ToastController) {}
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
     SiriShortcuts.addListener('appLaunchBySiriShortcuts', async (res) => {
